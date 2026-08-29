@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:projeto/components/menuDrawer.dart';
 import 'package:projeto/screens/terceira_page.dart';
 
 import 'myhomepage.dart';
@@ -21,46 +22,26 @@ class _SegundaPageState extends State<SegundaPage> {
         title: Text("Segunda tela"),
     ),
 
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              ListTile(
-                title: Text("Home"),
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) =>
-                          MyHomePage(title: "Calculadora Digital 1.0") ));
-                },
-              ),
-              ListTile(
-                title: Text("Segunda Tela"),
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) =>
-                          SegundaPage() ));
-                },
-              ),
-              ListTile(
-                title: Text("Terceira Tela"),
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) =>
-                          TerceiraPage() ));
-                },
-              )
-            ],
-          ),
-        ),
+        drawer: MenuDrawer(),
 
-    body: Center(
+    body: SingleChildScrollView(
+    child:
+    Container(
+      margin: EdgeInsets.all(100),
+      child: Column(
+          children: [
 
-    child: Column(
-      children: [
-        Text("Tela dois deu certo")
-      ],
+            Image.network("https://wallpapers.com/images/hd/4k-new-york-city-night-aprvk4dzv30pf7bp.jpg",
+              fit: BoxFit.cover,
+            ),
+            SizedBox(height: 20),
+            Text("A vida do CLT"),
+            Image.asset("assets/images/top-sea.jpg")
+          ],
 
-
-    )));
+      ),
+    ),
+));
   }
 
 

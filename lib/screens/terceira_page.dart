@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projeto/screens/segunda_page.dart';
 
+import '../components/menuDrawer.dart';
 import 'myhomepage.dart';
 
 class TerceiraPage extends StatefulWidget {
@@ -21,36 +22,7 @@ class _TerceiraPageState extends State<TerceiraPage> {
           title: Text("Terceira tela"),
         ),
 
-        drawer: Drawer(
-          child: ListView(
-            children: [
-              ListTile(
-                title: Text("Home"),
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) =>
-                          MyHomePage(title: "Calculadora Digital 1.0") ));
-                },
-              ),
-              ListTile(
-                title: Text("Segunda Tela"),
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) =>
-                          SegundaPage() ));
-                },
-              ),
-              ListTile(
-                title: Text("Terceira Tela"),
-                onTap: (){
-                  Navigator.push(context,
-                      MaterialPageRoute(builder:(context) =>
-                          TerceiraPage() ));
-                },
-              )
-            ],
-          ),
-        ),
+        drawer: MenuDrawer(),
 
         body: Center(
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto/components/menuDrawer.dart';
 import 'package:projeto/screens/segunda_page.dart';
 import 'package:projeto/screens/terceira_page.dart';
 
@@ -74,36 +75,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
 
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-              title: Text("Home"),
-              onTap: (){
-                Navigator.push(context,
-                    MaterialPageRoute(builder:(context) =>
-                        MyHomePage(title: "navegou") ));
-              },
-            ),
-            ListTile(
-              title: Text("Segunda Tela"),
-              onTap: (){
-                Navigator.push(context,
-                    MaterialPageRoute(builder:(context) =>
-                        SegundaPage() ));
-              },
-            ),
-            ListTile(
-              title: Text("Terceira Tela"),
-              onTap: (){
-                Navigator.push(context,
-                    MaterialPageRoute(builder:(context) =>
-                        TerceiraPage() ));
-              },
-            )
-          ],
-        ),
-      ),
+      drawer: MenuDrawer(),
+
 
       body: Center(
 
