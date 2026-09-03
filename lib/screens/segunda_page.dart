@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:projeto/components/menuDrawer.dart';
-import 'package:projeto/screens/terceira_page.dart';
 
-import 'myhomepage.dart';
+
+
 
 class SegundaPage extends StatefulWidget {
-
-
   @override
   State<SegundaPage> createState() => _SegundaPageState();
 }

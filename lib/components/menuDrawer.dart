@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import '../screens/formulario_page.dart';
 import '../screens/myhomepage.dart';
 import '../screens/segunda_page.dart';
 import '../screens/terceira_page.dart';
@@ -33,6 +32,14 @@ class MenuDrawer extends StatelessWidget{
               Navigator.push(context,
                   MaterialPageRoute(builder:(context) =>
                       TerceiraPage() ));
+            },
+          ),
+          ListTile(
+            title: Text("Formulario"),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder:(context) =>
+                      FormularioPage() ));
             },
           )
         ],
